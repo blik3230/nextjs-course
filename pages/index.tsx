@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import React from 'react';
-import { Button, Htag, P, Tag } from '../components';
+import { Button, Htag, P, Rating, Tag } from '../components';
 
 const Home: NextPage = () => {
   return (
@@ -58,6 +58,19 @@ const Home: NextPage = () => {
       <Tag href={'https://google.com'} size="m">
         Medium
       </Tag>
+      <div>
+        <Rating rating={2} onChange={(rating) => console.log(rating)} />
+      </div>
+      <div>
+        <Rating
+          rating={2}
+          onChange={() => console.log('not editable - error')}
+          editable={false}
+        />
+      </div>
+      <div>
+        <Rating rating={2} />
+      </div>
     </div>
   );
 };

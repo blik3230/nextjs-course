@@ -1,0 +1,26 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row-reverse;
+
+  box-sizing: content-box;
+}
+
+.item {
+  padding-right: 5px;
+  fill: #e2e2e2;
+}
+
+.active,
+.active ~ .item {
+  fill: #7653fc;
+}
+
+.editable:hover .item {
+  fill: #e2e2e2;
+}
+
+.editable .item:hover,
+.editable .item:hover ~ .item {
+  fill: #7653fc;
+}

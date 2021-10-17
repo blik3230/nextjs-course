@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import React from 'react';
 import { Button, Htag, P, Rating, Tag } from '../components';
+import { withGeneralLayout } from '../layouts';
 
 const Home: NextPage = () => {
   return (
@@ -75,4 +76,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default withGeneralLayout(Home);

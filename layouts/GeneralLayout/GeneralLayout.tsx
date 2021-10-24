@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import React from 'react';
+import { AppContextProvider, IAppContext } from '../../contexts/app.context';
 import styles from './GenaralLayout.module.css';
 import { GeneralLayoutProps } from './GeneralLayout.props';
 import { Footer, Header, Sidebar, Main } from '../index';
@@ -19,14 +20,18 @@ const GeneralLayout = ({
   );
 };
 
-export const withGeneralLayout = <T extends Record<string, unknown>>(
+export const withGeneralLayout = <
+  T extends Record<string, unknown> & IAppContext
+>(
   Component: React.FunctionComponent<T>
 ) => {
   return function WithGeneralLayout(props: T) {
     return (
-      <GeneralLayout>
-        <Component {...props} />
-      </GeneralLayout>
+      <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
+        <GeneralLayout>
+          <Component {...props} />
+        </GeneralLayout>
+      </AppContextProvider>
     );
   };
 };

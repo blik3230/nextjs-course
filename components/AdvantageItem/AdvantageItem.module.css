@@ -1,0 +1,22 @@
+.root {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+
+  align-items: center;
+}
+
+.title {
+  padding-left: 40px;
+}
+
+.content {
+  margin-top: 9px;
+  margin-left: 24px;
+
+  padding-left: 40px;
+
+  vertical-align: top;
+
+  border-left: 1px solid #d2d2d2;
+  grid-column: 1 / 3;
+}

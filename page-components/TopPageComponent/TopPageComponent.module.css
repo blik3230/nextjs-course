@@ -1,0 +1,40 @@
+.root {
+  margin-top: 40px;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+
+  align-items: baseline;
+  justify-items: left;
+
+  gap: 20px;
+}
+
+.hhTitle {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  align-items: baseline;
+  justify-items: left;
+
+  gap: 20px;
+}
+
+.advantages {
+  margin-top: 47px;
+}
+
+.advantagesList > * + * {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.skills {
+  margin-top: 30px;
+}
+
+.skillsTags {
+  margin-bottom: 50px;
+}
